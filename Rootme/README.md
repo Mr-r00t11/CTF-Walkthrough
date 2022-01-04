@@ -1,5 +1,14 @@
-# Rootme
+![](https://miro.medium.com/max/2000/1*esghPi4R2cEjX5LstPmxHg.png)
 
+___
+
+### Reto completo 
+
+[https://www.youtube.com/watch?v=8UbjrRyW3Tc&ab_channel=Z3r0_302](https://www.youtube.com/watch?v=8UbjrRyW3Tc&ab_channel=Z3r0_302)
+
+___
+
+### Answers
 Para visualizar los puertos abiertos, usaremos nmap para el descubrimiento de servicios y sus respectivas versiones.
 
 `$ sudo nmap -sS --min-rate 5000 10.10.81.126 -v -n -Pn --open -p- -oN scann`
@@ -109,6 +118,3 @@ Visualizamos el puerto 80 abierto, ahora significa que esta alojando algun sitio
 
 `Command execute: find / -type f -name "root.txt" 2>/dev/null`
 
-# Video completo
-
-[Z3r0_302](https://www.youtube.com/watch?v=8UbjrRyW3Tc&ab_channel=Z3r0_302)
