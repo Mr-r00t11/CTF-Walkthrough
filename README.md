@@ -10,6 +10,6 @@ Es una plataforma donde podemos aprender tecnicas relacionadas al **pentesting**
 | Máquina  | Dificultad | Temas |
 | :------------ |:---------------:| -----:|
 | [Pickle Rick](https://github.com/Mr-r00t11/CTF-Walkthrough/tree/main/Pickle%20Rick)      | Easy | ctf, dirbuster, linux |
-| RootMe     | Easy        |   security, web, linux, privilege escalation |
+| [RootMe](https://github.com/Mr-r00t11/CTF-Walkthrough/tree/main/Rootme)     | Easy        |   security, web, linux, privilege escalation |
 | LFI | Easy        |    web, file inclusion, lfi, sudo|
 ----
